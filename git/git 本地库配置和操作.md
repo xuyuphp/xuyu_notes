@@ -7,7 +7,9 @@
 ----------
 ## 2.设置签名 ##
  - `$ git config user.name xuyu` ; `$ git config user.email xuyu@php.com` >>设置项目级别用户名和邮箱
+ - `$ cat /d/git_localtion/.git/config`; >>可以查看到[user]下设置用户名和密码
  - `$ git config --global user.name xuyu_golbal` ; `$ git config --global user.email xuyu@php_global.com` >>设置系统级别用户名和邮箱（推荐）
+ - `$ cat ~/.gitconfig`; >>查看家目录下的系统用户
  - tips:项目用户优先级大于系统用户级别，一般设置系统用户级别
 
 ----------
