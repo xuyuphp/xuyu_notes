@@ -46,6 +46,6 @@
 
 ----------
 ## 其他gitlab操作 ##
-  `gitlab-ctl stop` >> 停止gitlab
-  `gitlab-ctl restart` >> 重启gitlab
-  `vim /etc/gitlab/gitlab.rb` >> 配置文件位置
+ - `gitlab-ctl stop` >> 停止gitlab
+ - `gitlab-ctl restart` >> 重启gitlab
+ -  `vim /etc/gitlab/gitlab.rb` >> 配置文件位置
