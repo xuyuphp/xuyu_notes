@@ -15,11 +15,11 @@
 ----------
 ## 2.安装nginx ##
  - `vim /etc/yum.repos.d/nginx.repo` ; 创建nginx.repo写入下列代码
-  `[nginx]`
-  `name=nginx repo`
-  `baseurl=http://nginx.org/packages/centos/7/$basearch/`
-  `gpgcheck=0`
-  `enabled=1` 
+[nginx]
+name=nginx repo
+baseurl=http://nginx.org/packages/centos/7/$basearch/
+gpgcheck=0
+enabled=1
  - `yum list | grep nginx` ; 查看你nginx安装包
  - `yum -y install nginx` ; 安装nginx
  - `nginx` ; 启动nginx
