@@ -15,7 +15,7 @@
 ----------
 ## 2.安装nginx ##
  - `vim /etc/yum.repos.d/nginx.repo` ; 创建nginx.repo写入下列代码
-  `[nginx]
+ - `[nginx]
 name=nginx repo
 baseurl=http://nginx.org/packages/centos/7/$basearch/
 gpgcheck=0
