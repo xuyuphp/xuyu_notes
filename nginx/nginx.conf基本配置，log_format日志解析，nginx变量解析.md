@@ -27,8 +27,8 @@
  - &nbsp;&nbsp;&nbsp;&nbsp;`error_page  500 502 503 504  /50x.html;`
  - &nbsp;&nbsp;&nbsp;&nbsp;`location = /50x.html {`
  - &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`root   html/error/;` >> 50x.html存放在此路劲下
- - &nbsp;&nbsp;&nbsp;&nbsp`}`
- - &nbsp;&nbsp;&nbsp;&nbsp`}`
+ - &nbsp;&nbsp;&nbsp;&nbsp;`}`
+ - &nbsp;&nbsp;&nbsp;&nbsp;`}`
  - `include /etc/nginx/conf.d/*.conf;` >> 加载其余配置文件目录
  - `}`
 
