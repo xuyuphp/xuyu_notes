@@ -6,8 +6,8 @@
  - `error_log  /var/log/nginx/error.log warn;` >> 错误日志"warn"级别
  - `pid        /var/run/nginx.pid;` >> nginx启动服务时候的pid
  - `events {`
- - 	`worker_connections  1024;` >> 每个进程的最大连接数
- - 	`use epoll;` >> epoll工作模式
+ - 	&nbsp;&nbsp;&nbsp;&nbsp;`worker_connections  1024;` >> 每个进程的最大连接数
+ - 	&nbsp;&nbsp;&nbsp;&nbsp;`use epoll;` >> epoll工作模式
  -  `}`
  - `http {`
  -  `include       /etc/nginx/mime.types;` 
