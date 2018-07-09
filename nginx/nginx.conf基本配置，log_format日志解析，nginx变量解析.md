@@ -23,14 +23,14 @@
  - &nbsp;&nbsp;&nbsp;&nbsp;`location / {`
  - &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`root         html;` >> index.html所在的目录
  - &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`index  index.html index.htm;`
- - `}`
- - `error_page  500 502 503 504  /50x.html;`
- - `location = /50x.html {`
+ - &nbsp;&nbsp;&nbsp;&nbsp;`}`
+ - &nbsp;&nbsp;&nbsp;&nbsp;`error_page  500 502 503 504  /50x.html;`
+ - &nbsp;&nbsp;&nbsp;&nbsp;`location = /50x.html {`
  - &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`root   html/error/;` >> 50x.html存放在此路劲下
  - &nbsp;&nbsp;&nbsp;&nbsp`}`
  - &nbsp;&nbsp;&nbsp;&nbsp`}`
  - `include /etc/nginx/conf.d/*.conf;` >> 加载其余配置文件目录
-`}`
+ - `}`
 
  ----------
 ## log_format变量解析 ##
