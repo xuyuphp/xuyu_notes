@@ -54,7 +54,7 @@
  - `[root@tokyo nginx]# nginx -tc nginx.conf` >> 检查
  - `[root@tokyo nginx]# nginx -s reload` >> 重启
  - <font color="#dd0000">(2)测试：</font><br />
- - 访问http://45.77.22.42/需要输入用户名和密码配置成功
+ - 访问`http://45.77.22.42/`需要输入用户名和密码配置成功
  - <font color="#dd0000">局限性：</font><br />
  - 1.用户依赖文件方式
  - 2.机械管理，效率低下
