@@ -1,4 +1,4 @@
-﻿## nginx请求限制和nginx访问控制 ##
+## nginx请求限制和nginx访问控制 ##
 ----------
 ## nginx请求限制 ##
  - <font color="#dd0000">基础知识：</font><br />
@@ -7,15 +7,15 @@
  - `ab -n 50 -c 20 http://www.baidu.com` >> ab压力测试 >> 请求50，并发20，请求地址(ab安装见后面)
  - <font color="#dd0000">代码配置：</font><br />
  - `http {`
- - 	&nbsp;&nbsp;&nbsp;&nbsp;`limit_req_zone $binary_remote_addr zone=req_zone:1m rate=1r/s;` >> 根据客户端地址$binary_remote_addr,给1m空间别称为req_zone,对于同一个客户端ip在1s内请求一次(http层)
- - 	&nbsp;&nbsp;&nbsp;&nbsp;`limit_conn_zone $binary_remote_addr zone=coon_zone:1m;`   >> (http)
- - 	&nbsp;&nbsp;&nbsp;&nbsp;`server {`
- - 		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`location / {`
- - 			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`limit_req zone=req_zone burst=3 nodelay;` >> 超过1个后三个到下一秒执行，nodelay其余的阻塞，burst=3 nodelay 为可选参数
- - 			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`limit_conn coon_zone 1;` >> 服务端同一时刻只允许一个ip链接过来
- - 		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`}`	
- - 	&nbsp;&nbsp;&nbsp;&nbsp;`}`
-`}`
+ -  &nbsp;&nbsp;&nbsp;&nbsp;`limit_req_zone $binary_remote_addr zone=req_zone:1m rate=1r/s;` >> 根据客户端地址$binary_remote_addr,给1m空间别称为req_zone,对于同一个客户端ip在1s内请求一次(http层)
+ -	&nbsp;&nbsp;&nbsp;&nbsp;`limit_conn_zone $binary_remote_addr zone=coon_zone:1m;`   >> (http)
+ -	&nbsp;&nbsp;&nbsp;&nbsp;`server {`
+ -		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`location / {`
+ -			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`limit_req zone=req_zone burst=3 nodelay;` >> 超过1个后三个到下一秒执行，nodelay其余的阻塞，burst=3 nodelay 为可选参数
+ -			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`limit_conn coon_zone 1;` >> 服务端同一时刻只允许一个ip链接过来
+ -		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`}`	
+ -	&nbsp;&nbsp;&nbsp;&nbsp;`}`
+ - `}`
 
  ----------
 ## nginx访问控制 ##
