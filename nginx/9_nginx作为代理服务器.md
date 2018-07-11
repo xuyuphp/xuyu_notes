@@ -1,13 +1,13 @@
-## nginx作为代理服务器##
+## nginx作为代理服务器 ##
 ----------
 
-## 基础知识##
+## 基础知识 ##
  -  语法：`proxy_pass URL;` >> (location)
  -  URL:格式`http://localhost:8000/url`,也支持https的协议本机ip地址写为127.0.0.1；
 
  ----------
 
-## 反向代理 (代理的对象是服务器)##
+## 反向代理 (代理的对象是服务器) ##
  - 代码示例：
  - `server {`
  - &nbsp;&nbsp;&nbsp;&nbsp;`listen 80;`
