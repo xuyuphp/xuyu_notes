@@ -30,7 +30,7 @@
  - `proxy_max_temp_file_size 256k;`
 
  ----------
-## 正向代理 (代理的视客户端）##
+## 正向代理(代理的视客户端）##
  - (1)被代理的服务器b配置
  - `location / {`
  - &nbsp;&nbsp;&nbsp;&nbsp;`if ( $http_x_forwarded_for !~* "^116\.62\.103\.28" ) {`
